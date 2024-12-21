@@ -11,12 +11,13 @@ This README has all the necessary instructions for setting up and using the RADA
 3.  Running the Project
     -   Training
     -   Inference
-4. Detailed command usage
-5. Configuration file
-6. Training models 
-7. Running inference
-8. Combined training and inference
-9. Troubleshooting
+4. Detailed Command Usage
+5. Configuration File
+6. Training Models 
+7. Running Inference
+8. Combined Training and Inference
+9. Inference Results
+10. Troubleshooting
 
 > **Note**: This project has been successfully built and tested on Windows with WSL/Linux. We highly recommend to run this project in a similar environment.
 
@@ -183,6 +184,16 @@ To train the models and then run inference, use:
 ```sh
 ./run.sh --operation both --models dino_v2 segformer --config config/config.yaml
 ```
+
+## Inference Results
+
+DINOv2             |  Segformer
+:-------------------------:|:-------------------------:
+![DINOv2 Output 1](outputs/dino_v2_inference_2.png)  |  ![Segformer Output 1](outputs/segformer_inference_2.png)
+
+DINOv2             |  Segformer
+:-------------------------:|:-------------------------:
+![DINOv2 Output 1](outputs/dino_v2_inference.png)  |  ![Segformer Output 1](outputs/segformer_inference.png)
 
 ## Troubleshooting
 
