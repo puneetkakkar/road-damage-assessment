@@ -6,23 +6,23 @@ This README has all the necessary instructions for setting up and using the RADA
 
 ## Table of Contents
 
-1.  Prerequisites
-2.  Setup Instructions
-3.  Running the Project
+1. [Prerequisites](#prerequisites)
+2. [Setup Instructions](#setup-instructions) 
+3. [Running the Project](#running-the-project)
     -   Training
     -   Inference
-4. Detailed Command Usage
-5. Configuration File
-6. Training Models 
-7. Running Inference
-8. Combined Training and Inference
-9. Inference Results
-10. Troubleshooting
+4. [Detailed Command Usage](#detailed-command-usage)
+5. [Configuration File](#configuration-file)
+6. [Training Models](#training-models) 
+7. [Running Inference](#running-inference)
+8. [Combined Training and Inference](#combined-training-and-inference)
+9. [Inference Results](#inference-results)
+10. [Troubleshooting](#troubleshooting)
 
 > **Note**: This project has been successfully built and tested on Windows with WSL/Linux. We highly recommend to run this project in a similar environment.
 
 
-## Prerequisites
+## Prerequisites <a name="prerequisites"></a>
 
 -   **Python 3.8+** is required. Make sure it's installed and accessible via the `python3` command.
 -   **CUDA** is necessary for both training and inference, as the models are trained using GPU acceleration.
@@ -30,7 +30,7 @@ This README has all the necessary instructions for setting up and using the RADA
 -   **OpenCV**: If not already installed, the script will automatically install OpenCV.
 -   **Git**: Ensure that Git is available to clone the repository.
 
-## Setup Instructions
+## Setup Instructions <a name="setup-instructions"></a>
 ### 1. Create a Python Virtual Environment
 
 To avoid conflicts with other Python projects, it is highly recommended to create a fresh virtual environment. Follow these steps:
@@ -87,7 +87,7 @@ You may need to install CUDA drivers and dependencies manually if not already in
 
 Ensure that **NVIDIA CUDA Toolkit** and **cuDNN** are installed and the appropriate **PATH** environment variables are set. [CUDA installation guide](https://developer.nvidia.com/cuda-toolkit).
 
-## Running the Project
+## Running the Project <a name="running-the-project"></a>
 
 ### 1. Activating the Virtual Environment
 
@@ -114,7 +114,7 @@ Or to run inference:
 
 You can also run both training and inference in a single step by using the `both` option for the `--operation` flag.
 
-## Detailed Command Usage
+## Detailed Command Usage <a name="detailed-command-usage"></a>
 
 The `run.sh` script is the main entry point, which accepts the following arguments:
 
@@ -131,7 +131,7 @@ The `run.sh` script is the main entry point, which accepts the following argumen
  
 -   `--config`: Path to the configuration file (default: `config/config.yaml`).
 
-## Configuration File (`config.yaml`)
+## Configuration File <a name="configuration-file"></a>
 
 The configuration file allows you to customize paths, model settings, and hyperparameters. Here's an overview of the key sections:
 
@@ -153,7 +153,7 @@ The configuration file allows you to customize paths, model settings, and hyperp
 
 **Note:** Modify these configurations based on your GPU availability, and inference requirements.
 
-## Training Models
+## Training Models <a name="training-models"></a>
 
 To train the models, you can use the `train` operation. Ensure that your configuration file is correctly set up (especially the dataset paths and model parameters).
 
@@ -167,7 +167,7 @@ For example:
 
 -  The trained models' checkpoints will be saved in the directories defined under `training.dino_v2.save_checkpoint_path` and `training.segformer.save_checkpoint_path` in the `config.yaml`.
 
-## Running Inference
+## Running Inference <a name="running-inference"></a>
 
 You can run inference on a custom image or use a random image chosen from test dataset (default) and specify the model checkpoints to be used for evaluation in the `config.yaml`. The following command runs inference with the DINOv2 and SegFormer models on specified images:
 
@@ -177,7 +177,7 @@ You can run inference on a custom image or use a random image chosen from test d
 
 The output images will be saved to the locations specified in the configuration file under the `inference_save_path` fields. These are defined by `inference.dino_v2.inference_save_path` and `inference.segformer.inference_save_path`.
 
-## Combined Training and Inference
+## Combined Training and Inference <a name="combined-training-and-inference"></a>
 
 To train the models and then run inference, use:
 
@@ -185,7 +185,7 @@ To train the models and then run inference, use:
 ./run.sh --operation both --models dino_v2 segformer --config config/config.yaml
 ```
 
-## Inference Results
+## Inference Results <a name="inference-results"></a>
 
 DINOv2             |  Segformer
 :-------------------------:|:-------------------------:
@@ -195,7 +195,7 @@ DINOv2             |  Segformer
 :-------------------------:|:-------------------------:
 ![DINOv2 Output 1](outputs/dino_v2_inference.png)  |  ![Segformer Output 1](outputs/segformer_inference.png)
 
-## Troubleshooting
+## Troubleshooting <a name="troubleshooting"></a>
 
 -   **CUDA is required**: Ensure you have a compatible NVIDIA GPU and CUDA installed. The models are trained on CUDA, and CUDA is mandatory for both training and inference.
     
