@@ -1,0 +1,46 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 630,
+        "width": 1024
+    },
+    "objects": [
+        {
+            "id": 164370,
+            "classId": 2963,
+            "description": "",
+            "geometryType": "bitmap",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-06-05T19:40:08.087Z",
+            "updatedAt": "2023-06-05T19:40:08.087Z",
+            "tags": [],
+            "classTitle": "road",
+            "bitmap": {
+                "data": "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",
+                "origin": [
+                    164,
+                    1
+                ]
+            }
+        },
+        {
+            "id": 164369,
+            "classId": 2964,
+            "description": "",
+            "geometryType": "bitmap",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-06-05T19:40:08.087Z",
+            "updatedAt": "2023-06-05T19:40:08.087Z",
+            "tags": [],
+            "classTitle": "cracks",
+            "bitmap": {
+                "data": "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",
+                "origin": [
+                    448,
+                    367
+                ]
+            }
+        }
+    ]
+}

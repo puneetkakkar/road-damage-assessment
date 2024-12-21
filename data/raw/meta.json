@@ -1,0 +1,30 @@
+{
+    "classes": [
+        {
+            "title": "cracks",
+            "shape": "bitmap",
+            "color": "#E54A40",
+            "geometry_config": {},
+            "id": 2964,
+            "hotkey": ""
+        },
+        {
+            "title": "pothole",
+            "shape": "bitmap",
+            "color": "#3697DB",
+            "geometry_config": {},
+            "id": 2965,
+            "hotkey": ""
+        },
+        {
+            "title": "road",
+            "shape": "bitmap",
+            "color": "#F2C510",
+            "geometry_config": {},
+            "id": 2963,
+            "hotkey": ""
+        }
+    ],
+    "tags": [],
+    "projectType": "images"
+}

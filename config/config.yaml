@@ -1,0 +1,38 @@
+data:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+
+wandb:
+  project_name: "RADAR"
+
+models:
+  dino_v2_checkpoint: "checkpoints/dino_v2/best_fine_tuned_dinov2.pt"
+  segformer_checkpoint: "checkpoints/segformer/best_fine_tuned_segformer.pt"
+
+training:
+  dino_v2:
+    base_model: "facebook/dinov2-base"
+    batch_size: 16
+    epochs: 20
+    learning_rate: 0.0001
+    device: "cuda"
+    use_augmentation: true
+    save_checkpoint_path: "checkpoints/dino_v2"
+  segformer:
+    base_model: "nvidia/mit-b0"
+    batch_size: 16
+    epochs: 20
+    learning_rate: 0.0001
+    device: "cuda"
+    use_augmentation: true
+    save_checkpoint_path: "checkpoints/segformer"
+
+inference:
+  dino_v2:
+    custom_image_path: "data/raw/img/1054937_DF_020_020BDF0070_08018_RAW.jpg"
+    use_custom_image: false
+    inference_save_path: "outputs/dino_v2_inference.png"
+  segformer:
+    custom_image_path: "data/raw/img/1054937_DF_020_020BDF0070_08018_RAW.jpg"
+    use_custom_image: false
+    inference_save_path: "outputs/segformer_inference.png"
